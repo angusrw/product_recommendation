@@ -12,6 +12,6 @@ Uses [UK E-Commerce Dataset](https://www.kaggle.com/carrie1/ecommerce-data), con
 
 [train_eval.ipynb](https://github.com/angusrw/product_recommendation/blob/main/train_eval.ipynb) contains code to split the input data, train models and generate predictions, and compare the two models using F1 Score / Precision / Recall across a range of number of recommendations per user.
 
-Comparing the F1 Score at 4 recommendations per user, the Collaborative Filtering Model shows an improvement of 123% over the baseline model (this figure will differ between runs).
+Comparing the F1 Score at 4 recommendations per user, the Collaborative Filtering Model shows an improvement of ~100% over the baseline model (this figure will differ between runs).
 
 *NB: evaluating recommender systems can be difficult due to the nature of the task as recommending a list of predictions of some length, and then comparing that list to another list of purchases which might a different length, which explains why the absolute F1 Score returned by the collaborative filtering model is low (>0.1), hence the focus on comparative evaluation*
