@@ -3,9 +3,7 @@ import time
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
-from sklearn.model_selection import train_test_split
 from sklearn.metrics.pairwise import cosine_similarity
 
 class Recommender:
@@ -112,7 +110,7 @@ class ColabFilteringRecommender(Recommender):
         #for each customer get ratings for products they haven't bought
         count = 0
         for i,r in data.iterrows():
-            if count%400==0: print(count/data.shape[0])
+            if count%400==0: print(f"{count}/{data.shape[0]}")
             count+=1
             # get sorted row of similar customers
             cust_sim_scores = df_cos_sim.loc[i].sort_values(ascending=False)
